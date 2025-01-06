@@ -13,4 +13,4 @@ while (x <=10) {
   x ++
 }
 
-console.log (factorial,x)
+
