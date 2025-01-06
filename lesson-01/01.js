@@ -5,7 +5,7 @@
 let sum = 1;
 let x = 2;
 while (x <= 20) {
-  sum += x;
-  x++ 
+  sum += x; //sum = sum + x
+  x++ // x = x + 1
 }
 
