@@ -4,44 +4,23 @@
  * Результат сохраните в переменной grade.
  */
 
-const score = 55 // тестовое значение, можно изменять
-let grade = "F"
-
-// switch (true) {
-//     case (score >= 0 && score < 50):
-//         grade = "F"
-//         console.log('1');
-//         break;
-//     case (score >= 50 && score < 70):
-//         grade = "D"
-//         console.log('2');
-//         break;
-//     case (score >= 70 && score < 80):
-//         grade = "C"
-//         console.log('3');
-//         break;
-//     case (score >= 80 && score < 90):
-//         grade = "B"
-//         console.log('4');
-//         break;
-//     case (score >= 90 && score <= 100):
-//         grade = "A"
-//         console.log('5');
-//         break;
-//     default:
-//         console.log('6');
-//         break;
-// }
+const score = 70 // тестовое значение, можно изменять
+let grade
+// your code
 
 if (score >= 0 && score < 50) {
-    grade = "F"
+    grade = "F";
+    console.log(grade);
 } else if (score >= 50 && score < 70) {
-    grade = "D"
+    grade = "D";
+    console.log(grade);
 } else if (score >= 70 && score < 80) {
-    grade = "C"
+    grade = "C";
+    console.log(grade);
 } else if (score >= 80 && score < 90) {
-    grade = "B"
+    grade = "B";
+    console.log(grade);
 } else if (score >= 90 && score <= 100) {
-    grade = "A"
+    grade = "A";
+    console.log(grade);
 }
-// your code
