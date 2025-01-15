@@ -6,4 +6,20 @@
 
 const score = 70 // тестовое значение, можно изменять
 let grade
+
+switch (true) {
+    case (score >= 0 && score < 50):
+        grade = "F"
+        break;
+    case (score >= 50 && score < 70):
+        grade = "D"
+    case (score >= 70 && score < 80):
+        grade = "C"
+    case (score >= 80 && score < 90):
+        grade = "B"
+    case (score >= 90 && score <= 100):
+        grade = "A"
+    default:
+        break;
+}
 // your code
