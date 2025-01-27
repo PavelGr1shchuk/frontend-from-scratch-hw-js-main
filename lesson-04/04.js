@@ -17,5 +17,5 @@ function doubleEachCharacter(string) {
     const new_arr = arr.reduce((acc, element) => {
         return [...acc, element, element]
     }, [])
-    return new_arr.join()
+    return new_arr.join("")
 }
