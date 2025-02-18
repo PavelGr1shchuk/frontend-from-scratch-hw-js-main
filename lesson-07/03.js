@@ -10,13 +10,13 @@
 */
 
 function truncate(str, maxLength) {
-  const strg = str.lenght;
-  if (strg < maxLength) {
-    return str;    
+  const strg = str.length;
+  if (strg > maxLength) {
+    return( str.substr(0, maxLength) + "...");    
   } else {
-    return(str.substr(0, maxLength) + "...");
+    return str;
   }
 }
 
-// console.log(truncate("Вот, что мне действительно нравится в этом", 20));
+console.log(truncate("Короткая строка", 20) );
 
