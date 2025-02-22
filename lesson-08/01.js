@@ -14,19 +14,54 @@
   🧙 Подсказка: если пользователь кликнет по кнопке с питомцев, id питомца можно будет получить из объекта события (event.target.id)
 */
 
-const PETS = [
-  { id: 'cat', title: '🐱' },
-  { id: 'dog', title: '🐶' },
-  { id: 'parrot', title: '🦜' },
-  { id: 'fish', title: '🐠' },
-  { id: 'spider', title: '🕷' },
-  { id: 'snake', title: '🐍' },
-  { id: 'hamster', title: '🐹' },
-  { id: 'turtle', title: '🐢' },
-  { id: 'chinchilla', title: '🦇' },
-  { id: 'hedgehog', title: '🦔' },
-  { id: 'rat', title: '🐀' },
-  { id: 'frog', title: '🐸' },
+const PETS = [{
+    id: 'cat',
+    title: '🐱'
+  },
+  {
+    id: 'dog',
+    title: '🐶'
+  },
+  {
+    id: 'parrot',
+    title: '🦜'
+  },
+  {
+    id: 'fish',
+    title: '🐠'
+  },
+  {
+    id: 'spider',
+    title: '🕷'
+  },
+  {
+    id: 'snake',
+    title: '🐍'
+  },
+  {
+    id: 'hamster',
+    title: '🐹'
+  },
+  {
+    id: 'turtle',
+    title: '🐢'
+  },
+  {
+    id: 'chinchilla',
+    title: '🦇'
+  },
+  {
+    id: 'hedgehog',
+    title: '🦔'
+  },
+  {
+    id: 'rat',
+    title: '🐀'
+  },
+  {
+    id: 'frog',
+    title: '🐸'
+  },
 ]
 
 const cart = []
@@ -68,3 +103,14 @@ clearCartButton.addEventListener('click', function () {
 })
 
 // Твой код:
+petShop.addEventListener("click", function (e) {
+  if (cart.length === 3) {
+    messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
+    setTimeout(() => {
+      messageBox.textContent = ""
+    }, 3000);
+    return
+  }
+  cart.push(e.target.id)
+  updateCartDisplay()
+})
