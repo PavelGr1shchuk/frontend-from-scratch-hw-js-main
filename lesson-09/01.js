@@ -26,7 +26,7 @@
 const numbers = [1, 2, 3, 4, 5]
 
 const filter = numbers.filter((element, index) => {
-  return element % 2 === 0
+  return element % 2 !== 0
 });
 
 console.log(filter)
