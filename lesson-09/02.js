@@ -12,22 +12,13 @@
 Ваша функция `map` должна возвращать новый массив, где каждый элемент является результатом вызова функции `callback` на каждом элементе исходного массива.
 */
 
-/*
-Пример использования вашей функции:
+
+//Пример использования вашей функции:
 
 const numbers = [1, 2, 3, 4, 5]
 
-const doubledNumbers = map(numbers, (element, index) => {
+const doubledNumbers = numbers.map((element, index) => {
   return element * 2
 })
 
 console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
-*/
-
-const names = ['jo', 'nelson', 'jurie'] 
-
-const capitaliseEntry = names.map((element, index) => {
- return element.toUpperCase()
-})
-
-console.log(capitaliseEntry)
