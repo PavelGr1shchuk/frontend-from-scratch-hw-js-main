@@ -15,10 +15,10 @@
 
 //Пример использования вашей функции:
 
-const numbers = [1, 2, 3, 4, 5]
+// const numbers = [1, 2, 3, 4, 5]
 
-const doubledNumbers = numbers.map((element, index) => {
-  return element * 2
-})
+// const map = numbers.map((element, index) => {
+//   return element * 2
+// })
 
-console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
+// console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
