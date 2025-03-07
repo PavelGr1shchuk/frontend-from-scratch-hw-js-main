@@ -25,11 +25,18 @@ const model = {
   movies: [],
   addMovie(title, description) {
     const id = Math.random()
-    const newMovie = { id, title, description }
+    const newMovie = {
+      id,
+      title,
+      description
+    }
     this.movies.push(newMovie)
     view.renderMovies(this.movies)
   },
-  // your code
+  deleteMovie(id) {
+    this.movies = this.movies.filter((movie) => movie.id !== id)
+    view.renderMovies(this.movies)
+  }
 }
 
 const view = {
@@ -50,8 +57,15 @@ const view = {
       inputDescription.value = ''
     })
 
-    // your code
+    const list = document.querySelector('.list')
+    list.addEventListener('click', function (e) {
+      if (e.target.className === 'delete-button') {
+        controller.deleteMovie(+e.target.parentNode.id)
+      }
+    })
   },
+
+
   renderMovies(movies) {
     const list = document.querySelector('.list')
     let moviesHTML = ''
@@ -90,7 +104,10 @@ const controller = {
       view.displayMessage('Заполните все поля!', true)
     }
   },
-  // your code
+  deleteMovie(id) {
+    model.deleteMovie(id)
+    view.displayMessage("Фильм успешно удалён!")
+  }
 }
 
 function init() {
